@@ -19,11 +19,11 @@
 
     - first log into your mangoapps account in a web browser
 
-![](media/1.png)
+    - ![](media/1.png)
 
-![](media/2.png)
+    - ![](media/2.png)
 
-![](media/3.png)
+    - ![](media/3.png)
 
     - docker run -it --rm  -v /tmp/output:/mnt  mfd ./entry.lisp --cookie "efceb782409fc6c119ab8b85cf53ea70" --folder 6015535
 
