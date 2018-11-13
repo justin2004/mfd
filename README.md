@@ -6,7 +6,7 @@
 
 - why
 
-    - MangoApps limitation
+    - because of the MangoApps web interface limitation:
 
         - "You can download max of 1 Folder and 100 Files at a time"
 
@@ -17,7 +17,9 @@
 
 - how
 
-    - first log into your mangoapps account in a web browser
+    - first log into your MangoApps account in a web browser
+
+    - get the content of the cookie that authenticates you for this session and the folder id of the folder you want to download
 
     - ![](media/1.png)
 
@@ -25,16 +27,20 @@
 
     - ![](media/3.png)
 
-    - docker run -it --rm  -v /tmp/output:/mnt  mfd ./entry.lisp --cookie "efceb782409fc6c119ab8b85cf53ea70" --folder 6015535
+    - if your docker ce installation is using the docker hub registry:
 
-    - docker run -it --rm  -v /tmp/output:/mnt  justin2004/mfd ./entry.lisp --cookie "efceb782409fc6c119ab8b85cf53ea70" --folder 6015535
+        - docker run -it --rm  -v /tmp/output:/mnt  justin2004/mfd ./entry.lisp --cookie "efceb782409fc6c119ab8b85cf53ea70" --folder 6015535
 
     - if there are no errors then look in /tmp/output for your files
+
+    - then sign out of the MangoApps session in your browser (to invalidate that cookie)
 
 
 ---
 
 ### TODO/notes 
+
+- this docker image is already built at: https://hub.docker.com/r/justin2004/mfd/
 
 - quicklisp concerns
 
