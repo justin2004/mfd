@@ -22,6 +22,9 @@ RUN wget 'https://beta.quicklisp.org/quicklisp.lisp'
 RUN touch .sbclrc
 RUN sbcl --load quicklisp.lisp --load install_it.lisp --eval '(quit)'
 
+# TODO add a volume at /mnt ?
+
+
 #STOPSIGNAL SIGTERM
 
 CMD ["./entry.lisp", "--help"]
