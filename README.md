@@ -52,4 +52,4 @@
 
 - note why i didn't implement logon
 
-- not tested with filenames with embedded slashes (though outputting to a docker volume should protect your host OS filesystem)
+- not tested with filenames with embedded ../../.. (though outputting to a docker volume should protect your host OS filesystem)
